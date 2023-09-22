@@ -83,7 +83,7 @@ mol = dm.to_mol(smiles)
 mol_with_conformers = dm.conformers.generate(mol)
 
 # 3D viz (using nglview)
-dm.viz.conformers(mol, n_confs=10)
+dm.viz.conformers(mol_with_conformers, n_confs=10)
 
 # Compute SASA from conformers
 sasa = dm.conformers.sasa(mol_with_conformers)
